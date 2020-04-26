@@ -17,9 +17,7 @@ public class AppConfig {
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
 
         RedisTemplate<String, Object> template = new RedisTemplate<>();
-        // 配置连接工厂
         template.setConnectionFactory(factory);
-        // 值采用json序列化
         template.setValueSerializer(new StringRedisSerializer());
         return template;
     }
